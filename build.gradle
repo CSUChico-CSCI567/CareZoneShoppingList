@@ -15,7 +15,5 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        compile 'com.squareup.retrofit:retrofit:1.9.0'
-        compile 'com.squareup.okhttp:okhttp:2.3.0'
     }
 }
