@@ -10,6 +10,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Toast;
+
+import com.coding.doublea.carezoneshoppinglist.api.APIHelper;
+import com.coding.doublea.carezoneshoppinglist.api.CZRetrofitCallback;
+import com.coding.doublea.carezoneshoppinglist.api.ShoppingListService;
+import com.coding.doublea.carezoneshoppinglist.models.ShoppingItem;
+
+import java.util.List;
+
+import retrofit.client.Response;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -53,6 +63,7 @@ public class MainActivity extends ActionBarActivity {
      */
     public static class PlaceholderFragment extends Fragment {
 
+        ShoppingListService czShoppingListService;
         public PlaceholderFragment() {
         }
 
@@ -60,6 +71,16 @@ public class MainActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            APIHelper api = APIHelper.getInstance(getActivity());
+            api.createAPIInterface(ShoppingListService.class).fetchItems(
+                    new CZRetrofitCallback<List<ShoppingItem>>() {
+                        @Override
+                        public void success(List<ShoppingItem> shoppingItems, Response response) {
+                            super.success(shoppingItems, response);
+
+                        }
+                    }
+            );
             return rootView;
         }
     }
