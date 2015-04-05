@@ -3,6 +3,7 @@ package com.coding.doublea.carezoneshoppinglist.api;
 import com.coding.doublea.carezoneshoppinglist.models.ShoppingItem;
 import com.squareup.okhttp.Call;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Callback;
@@ -20,7 +21,7 @@ public interface ShoppingListService {
      */
     @Headers("Accept: application/json")
     @GET("/items") void fetchItems(
-            CZRetrofitCallback<List<ShoppingItem>> cb
+            CZRetrofitCallback<ArrayList<ShoppingItem>> cb
     );
 
 }
