@@ -10,4 +10,5 @@
     <string name="dialog_update_title">Update Item</string>
     <string name="dialog_update_button">Update</string>
     <string name="dialog_delete_button">Delete</string>
+    <string name="cz_url">http://czshopper.herokuapp.com</string>
 </resources>
