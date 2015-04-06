@@ -30,6 +30,10 @@ public class ShoppingItem implements Parcelable {
     @Expose
     private Integer userId;
 
+    public ShoppingItem(String category, String name){
+        this.category = category;
+        this.name = name;
+    }
     /**
      *
      * @return

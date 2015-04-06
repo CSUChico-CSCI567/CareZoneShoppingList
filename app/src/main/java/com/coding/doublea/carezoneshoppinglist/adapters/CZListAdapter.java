@@ -76,6 +76,16 @@ public class CZListAdapter extends RecyclerView.Adapter<CZListAdapter.ViewHolder
         mData.addAll(data);
     }
 
+    public void addData(ShoppingItem item) {
+        mData.add(item);
+    }
+
+    public void removeData(ShoppingItem item) {
+        if(mData.contains(item)) {
+            mData.remove(item);
+        }
+    }
+
     public ArrayList<ShoppingItem> getData() {
         return mData;
     }

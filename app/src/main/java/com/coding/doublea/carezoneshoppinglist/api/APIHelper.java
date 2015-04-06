@@ -1,16 +1,12 @@
 package com.coding.doublea.carezoneshoppinglist.api;
 
 import android.content.Context;
-import android.net.http.HttpResponseCache;
-import android.util.Log;
 
 import com.coding.doublea.carezoneshoppinglist.R;
 import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.io.File;
-import java.io.IOException;
-import java.util.UUID;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -33,9 +29,6 @@ public class APIHelper {
         mContext = applicationContext;
         File cacheDir = new File(mContext.getCacheDir(), "responses");
         int cacheSize = 10 * 1024 * 1024; // 10 MiB
-        Cache httpResponseCache = null;
-        httpResponseCache = new Cache(cacheDir, cacheSize);
-
 
         Cache cache = new Cache(cacheDir, cacheSize);
 
@@ -43,8 +36,8 @@ public class APIHelper {
         mClient.setCache(cache);
     }
 
-    public static synchronized APIHelper getInstance(Context context){
-        if(mInstance == null) {
+    public static synchronized APIHelper getInstance(Context context) {
+        if (mInstance == null) {
             mInstance = new APIHelper(context.getApplicationContext());
         }
         return mInstance;
