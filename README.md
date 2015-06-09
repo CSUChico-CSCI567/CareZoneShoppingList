@@ -1,4 +1,7 @@
 # CareZoneShoppingList
+This is an app example Aaron McIntyre to demo recyclerview, cardview, and retrofit w/ OkHttp. The rest of the readme was provided by Aaron:
+
+## About
 SampleApp for CareZone android position
 I know that the instructions say only spend 3 hours on this but I enjoy learning new things and I had a couple of libraries I have been watching but never got a chance to use(FAB and Material Dialogs). So I spent some time learning some new stuff before I started to code this. The coding took around 2-3 hours. My learning added another 3 hours and I spent an hour whitebroading the program structure. Then spent a little time making this nice README. Enjoy and thank you for the opportunity to show you how I code.
 
